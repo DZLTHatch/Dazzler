@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/index.css">
+    <link rel="stylesheet" href="../CSS/dzl.css">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <a href="#header"><img src="../images/dzl.png" alt="" class="logo"></a>
+                <ul id="sidemenu">
+                    <li><a href="dzlMain.html">Home</a></li>
+                    <li><a href="dzlMain.html#about">About</a></li>
+                    <li><a href="dzlMain.html#services">Services</a></li>
+                    <li><a href="dzlMain.html#portfolio">Portfolio</a></li>
+                    <li><a href="dzlMain.html#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()" style="cursor: pointer;"></i>
+            </nav>
+            <div class="user hide-details" id="userBox">
+                <img src="../images/blackhoodie.jpg" alt="" onclick="open_info()">
+                <div class="info">
+                    <h1>Web Design</h1>
+                    <p>Working as a student <span> West Campus HS</span></p>
+                    <p>From: California, USA</p>
+                    <a href="dzlMain.html#services">Back to Services</a>
+                </div>
+                <div class="close-icon" onclick="close_info()">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright" style="position: fixed; left: 0; bottom: 0; right: 0">
+        <p>Copyright &copy; Dazzler. Made with and by <i class="fas fa-heart"></i> Easy Tutorials.</p>
+    </div>
+    <script src="../Javascript/dzl.js"></script>
+    <script>
+        const userBox = document.getElementById("userBox");
+
+
+        function open_info() {
+            userBox.classList.remove('hide-details');
+        }
+        function close_info() {
+            userBox.classList.add('hide-details');
+        }
+    </script>
+</body>
+
+</html>

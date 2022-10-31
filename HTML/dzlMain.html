@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/dzl.css">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <a href="#header"><img src="../images/dzl.png" alt="" class="logo"></a>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>UI/UX Designer</p>
+                <h1>Hi, I'm <span>Thatch D </span><br></nr>from the United States</h1>
+            </div>
+        </div>
+    </div>
+    <!-- About -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="../images/blackhoodie.jpg" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>An ambitious 14 year-old boy with certain personal goals and achievements. He loves web development and AI development. He has set aside 4 precious years for programming in Python and web development in HTML, CSS and JavaScript. The boy grinds hard, probably harder than most of his friends and is looking forward to making more friends with the mindset. Thatch, a caring boy bonds with everybody and everything. Some of his friends do want to become wealthy just like him, and he respects them. Thinking about running a business and getting into web development, with the help of Easy Tutorials. He was able to get his portfolio launched and prove himself.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experiences</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web/App Interfaces</li>
+                            <li><span>Web Development</span><br>Web App Development</li>
+                            <li><span>App Development</span><br>Building Android/IOS apps</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2022 - Current</span><br>AP Computer Science at West Campus</li>
+                            <li><span>2019 - 2021</span><br>Web Development</li>
+                            <li><span>2018</span><br>Building Games with Python</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2022</span><br>West Campus AP Computer Science Student</li>
+                            <li><span>2021</span><br>Self-taught Web Development</li>
+                            <li><span>2020</span><br>Self-taught Web Designing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Service</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fas fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>I create websites with HTML, CSS, and Javascript. My websites are built with the basis of these 3 languages but their content is more than awesome!</p>
+                    <a href="index.html#header">Learn More</a>
+                </div>
+                <div>
+                    <i class="fas fa-crop-alt"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>Designs for websites are often created with Figma or 3D Sketchpad. These designs are being developed overtime and getting better each day.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fab fa-app-store"></i>
+                    <h2>AI Development</h2>
+                    <p>AIs are essential, so I create AIs for basic uses like autoscrolling, autocliking, and returning the basic weather information or certain stocks. </p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Policies</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="../images/wine-g7bdd46b3d_1280.jpg" alt="">
+                    <div class="layer">
+                        <h3>Play Hard!</h3>
+                        <p>I play play hard, very hard! I enjoy my life in all aspects. After grinding in the day, I go and party with my friends and family.</p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="../images/interior-design-g9529861dc_1280.jpg" alt="">
+                    <div class="layer">
+                        <h3>Work Hard!</h3>
+                        <p>Grind, grind and grind hard! Success is 90% grinding, 5% luck and 5% skills. Enjoy every steps, appreciate everything I do and receive. The present is a present, so even when working I always put on a smile.</p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="../images/teamwork-g04a9eddf7_640.jpg" alt="">
+                    <div class="layer">
+                        <h3>Bond, Cooperate, Teamwork</h3>
+                        <p>Without the help of others, I will not be standing here today. Bonding and harmonizing with others strengthen me and my soul.</p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See More</a>
+        </div>
+    </div>
+    <!-- Contact -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fas fa-paper-plane"></i> dazzler@gmail.com</p>
+                    <p><i class="fas fa-phone-square-alt"></i> (916) 111-0000</p>
+                    <div class="social-icons">
+                        <a href="https://facebook.com/"><i class="fa fa-facebook"></i></a>
+                        <a href=""><i class="fa fa-twitter-square"></i></a>
+                        <a href=""><i class="fa fa-instagram"></i></a>
+                        <a href=""><i class="fa fa-linkedin"></i></a>
+                    </div>
+                    <a href="../images/Solar System Lamp View 2.png" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your message" required></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright &copy; Dazzler. Made with and by <i class="fas fa-heart"></i> Easy Tutorials.</p>
+        </div>
+    </div>
+    <script src="../Javascript/dzl.js"></script>
+</body>
+
+</html>

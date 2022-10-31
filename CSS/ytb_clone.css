@@ -1,0 +1,788 @@
+html {
+    font-family: "Roboto", sans-serif;
+    background-color: #181818;
+    /* Youtube Darkmode - background-color: #181818 */
+    color: white;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 14px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #181818;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: rgb(172, 172, 172);
+    border: 3px solid #181818;
+}
+
+::-webkit-scrollbar-thumb:hover,
+::-webkit-scrollbar-thumb:active {
+    background-color: #555;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+abbr {
+    text-decoration: none;
+}
+
+button {
+    border-radius: 9999px;
+    cursor: pointer;
+}
+
+p {
+    margin: 0;
+}
+
+
+.display-flex-btwn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.display-flex {
+    display: flex;
+    align-items: center;
+}
+
+.pos-fxd {
+    position: fixed;
+}
+
+.header {
+    height: 56px;
+    padding: 0 16px;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: #212121;
+    z-index: 2000;
+}
+
+.hamburger-btn {
+    width: 24px;
+    height: 24px;
+    padding: 8px;
+    margin-right: 4px;
+    cursor: pointer;
+    border-radius: 9999px;
+    transition: background-color 0.2s;
+}
+
+.hamburger-btn svg,
+#youtube-paths {
+    filter: invert(0.9);
+}
+
+.youtube-icon-container {
+    width: 90px;
+    height: 20px;
+    padding: 16px 18px 14px;
+    position: relative;
+}
+
+.youtube-loc-tag {
+    position: absolute;
+    top: 11px;
+    font-size: 9px;
+    color: gray;
+    right: -3px;
+}
+
+.header-middle {
+    display: flex;
+    align-items: center;
+    max-width: 850px;
+    flex: 1;
+    margin-right: 35px;
+    margin-left: 75px;
+}
+
+.search-container {
+    min-width: 0px;
+    height: 40px;
+    margin-left: 16px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    border: 1px solid hsl(0, 0%, 18.82%);
+    overflow: hidden;
+    flex: 1;
+}
+
+#search-box {
+    flex: 1;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: hsl(0, 0%, 7%);
+    height: 100%;
+    padding-left: 4px;
+    font-size: 15px;
+    font-family: Arial;
+    width: 100%;
+    min-width: 0;
+}
+
+#search-box:active {
+    outline: none;
+    border: none;
+}
+
+.search-btn-container,
+.voice-search-btn-container,
+.create-btn-container,
+.notification-btn-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.tag-onHover {
+    position: absolute;
+    z-index: 20022;
+    background-color: rgba(110, 110, 110, 0.8);
+    font-size: 13px;
+    bottom: -55px;
+    padding: 10px 8px;
+    border-radius: 2px;
+    opacity: 0;
+    white-space: nowrap;
+    transition: opacity 0.15s;
+}
+
+.search-btn:hover+.tag-onHover,
+.voice-search-btn:hover+.tag-onHover,
+.create-btn:hover+.tag-onHover,
+.notification-btn:hover+.tag-onHover {
+    opacity: 1;
+}
+
+.search-btn {
+    border-radius: 0;
+    width: 65px;
+    height: 42px;
+    padding: 8px 1px;
+    border: 1px solid hsl(0, 0%, 18.82%);
+    background-color: hsl(0, 0%, 18.82%);
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    margin-right: 4px;
+}
+
+.search-btn svg,
+.voice-search-btn svg,
+.header-right button svg,
+.sidebar div svg,
+#hidden-sidebar div svg,
+.oc-pfp div svg {
+    filter: invert(1);
+}
+
+.voice-search-btn {
+    width: 42px;
+    height: 42px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.header-right {
+    display: flex;
+    justify-content: space-between;
+    min-width: 140px;
+}
+
+.header-right button,
+.pfp-btn {
+    height: 40px;
+    width: 40px;
+    background-color: transparent;
+    border: none;
+    min-width: 40px;
+    transition: background-color 0.25s, border 0.25s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pfp-btn div.oc-pfp:hover {
+    cursor: default;
+}
+
+.pfp-btn div.pfp-channel:hover {
+    cursor: pointer;
+}
+
+.header-right button:active,
+.hamburger-btn:active {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.pfp-btn {
+    border-radius: 9999px;
+}
+
+.pfp-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
+    border-radius: 9999px;
+}
+
+.oc-pfp {
+    background-color: #212121;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: absolute;
+    right: 75px;
+    z-index: 2000000;
+    display: none;
+    
+}
+
+.pfp-channel {
+    padding: 6px 0;
+    display: block;
+    overflow-y: auto;
+}
+
+.pfp-channel div {
+    display: flex;
+    height: 40px;
+    align-items: center;
+    padding: 0 36px 0 16px;
+    font-size: 14px;
+}
+
+.pfp-channel div:hover {
+    background-color: rgb(63, 63, 63);
+}
+
+.pfp-channel div svg {
+    height: 24px;
+    width: 24px;
+    margin-right: 14px;
+}
+
+.pfp-MAIN {
+    display: flex;
+    width: 266px;
+    padding: 16px;
+    height: 50px;
+    position: relative;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1)
+}
+
+.pfp-main {
+    height: 40px;
+    width: 40px;
+    margin-right: 16px;
+}
+
+.account-info {
+    width: 184px;
+    height: 40px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: Arial;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.account-management {
+    width: 185px;
+}
+
+.sidebar,
+#hidden-sidebar {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    bottom: 0;
+    min-width: 72px;
+    background-color: #212121;
+    padding-top: 4px;
+    z-index: 2000;
+}
+
+#hidden-sidebar {
+    width: 224px;
+    padding-top: 12px;
+    overflow: hidden;
+    overflow-x: hidden;
+    z-index: 100000;
+}
+
+#hidden-sidebar:hover,
+#hidden-sidebar:active {
+    overflow: auto;
+}
+
+#hidden-sidebar #ytb-settings-terms div:hover {
+    background-color: #212121
+}
+
+#oc-header {
+    z-index: 100000000;
+    background-color: #212121;
+    position: fixed;
+    top: 0;
+    left: 0px;
+    width: 224px;
+    padding: 3px 16px;
+    box-sizing: border-box;
+}
+
+#about-ytb {
+    display: block;
+    width: 192px;
+    height: 54px;
+    padding-top: 16px;
+    padding-right: 24px;
+    padding-left: 24px;
+}
+
+#about-ytb a {
+    color: rgb(183, 183, 183);
+    font-weight: bold;
+    font-size: 13px;
+    margin-right: 8px;
+}
+
+#hidden-sidebar::-webkit-scrollbar-track {
+    background-color: #212121;
+}
+
+/* 
+.oc-header {
+} */
+
+.sidebar div {
+    height: 44px;
+    padding-top: 16px;
+    padding-bottom: 14px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#hidden-sidebar div {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    height: 40px;
+    padding: 0 24px;
+    width: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+#hidden-sidebar div.pric:hover {
+    background-color: #212121;
+}
+
+#hidden-sidebar .sd-subscriptions-btn {
+    margin-bottom: 12px;
+}
+
+.sidebar div span {
+    font-size: 11px;
+    margin-top: 4px;
+}
+
+#hidden-sidebar span {
+    margin-left: 24px;
+    font-size: 14px;
+}
+
+.sidebar div svg,
+#hidden-sidebar svg {
+    width: 24px;
+    height: 24px;
+}
+
+#hidden-sidebar .sd-show-more-btn {
+    margin-bottom: 12px;
+}
+
+#subscriptions div {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    border-radius: 9999px;
+}
+
+.subscriptions-bar div img {
+    border-radius: 9999px;
+}
+
+.subscription-title {
+    color: #aaa;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 8px 4px;
+    margin-top: 12px;
+    font-weight: 600;
+
+}
+
+#more-from-ytb svg path,
+#more-from-ytb svg circle,
+#more-from-ytb svg polygon {
+    filter: invert(1)
+}
+
+
+.sidebar div:hover,
+#hidden-sidebar div:hover {
+    background-color: rgb(63, 63, 63);
+}
+
+.yt-recommendation-bar {
+    position: fixed;
+    top: 56px;
+    left: 72px;
+    right: 0;
+    height: 56px;
+    border-top: 1px solid rgb(63, 63, 63);
+    border-bottom: 1px solid rgb(63, 63, 63);
+    background-color: #212121;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 150;
+}
+
+.yt-recommendation-bar .yrb-btn,
+.all-btn-rb {
+    margin: 12px;
+    margin-left: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    min-width: 12px;
+    border-radius: 16px;
+    overflow: hidden;
+    height: 32px;
+    padding: 0 12px;
+    font-size: 15px;
+    font-weight: 400;
+    color: #ffff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-sizing: border-box;
+    transition: background-color 0.5s;
+}
+
+.all-btn-rb {
+    background-color: white;
+    color: black;
+}
+
+.yt-recommendation-bar .yrb-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.yt-recommendation-bar .yrb-btn:active {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.youtube-main-stream {
+    position: absolute;
+    top: 136px;
+    left: 80px;
+    column-gap: 16px;
+    row-gap: 24px;
+    margin-left: 16px;
+    margin-right: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-bottom: 16px;
+}
+
+@media (min-width: 1315px) {
+    .youtube-main-stream {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        left: 230px;
+    }
+
+    .sidebar {
+        width: 224px;
+        padding-top: 12px;
+    }
+
+    .sidebar div {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        align-items: center;
+        height: 40px;
+        padding: 0 24px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .sidebar div span {
+        margin-left: 24px;
+        font-size: 14px;
+    }
+
+    .yt-recommendation-bar {
+        left: 224px;
+    }
+
+}
+
+@media (max-width: 890px) {
+    .youtube-main-stream {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 800px) {
+    .sidebar {
+        display: none;
+    }
+
+    .youtube-main-stream {
+        left: 16px;
+    }
+
+    .yt-recommendation-bar {
+        left: 0;
+    }
+}
+
+@media (max-width: 510px) {
+    .youtube-main-stream {
+        grid-template-columns: 1fr;
+        left: 0;
+    }
+
+    .yt-recommendation-bar {
+        left: 0;
+    }
+
+    .sidebar {
+        display: none;
+    }
+}
+
+.yt-vid-container {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.thumbnail-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.thumbnail-container:hover>.hover-toPlay {
+    opacity: 1;
+}
+
+.thumbnail-container img {
+    width: 100%;
+    display: block;
+}
+
+.time-stamp {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 3px;
+    font-size: 12px;
+    border-radius: 2px;
+}
+
+.hover-toPlay {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background-color: rgba(0, 0, 0, 1);
+    font-size: 12px;
+    padding: 7px;
+    border-radius: 2px;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.video-details-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+.creator-pfp-container {
+    width: 35px;
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+
+.creator-pfp-container div {
+    border-radius: 9999px;
+}
+
+.creator-pfp-container div img {
+    width: 100%;
+    border-radius: 9999px;
+}
+
+.video-title-container {
+    margin-bottom: 8px;
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    max-height: 40px;
+    overflow: hidden;
+}
+
+.creator-container,
+.view-time {
+    color: rgb(160, 160, 160);
+    font-size: 12px;
+}
+
+.creator-container {
+    margin-bottom: 4px;
+    position: relative;
+}
+
+.creator {
+    display: inline-block;
+}
+
+.creator:hover {
+    color: white;
+}
+
+.creator-popUp {
+    position: absolute;
+    border-radius: 3px;
+    background-color: rgba(110, 110, 110, 0.9);
+    color: white;
+    padding: 8px;
+    top: -55px;
+    left: -7px;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.creator:hover+.creator-popUp {
+    opacity: 1;
+}
+
+#right-topsidebar {
+    flex: 1;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#top-sidebar {
+    width: 224px;
+    display: flex;
+    flex-direction: column;
+    background-color: #212121;
+    z-index: 100000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    animation-duration: 0.3s;
+    animation-name: slidein;
+    padding-top: 56px;
+}
+
+#oc-background-filter {
+    background-color: transparent;
+    animation: showUp 0.3s;
+}
+
+@keyframes slideinHeader {
+    from {
+        left: -224px;
+    }
+
+    to {
+        left: 0;
+    }
+}
+
+@keyframes slidein {
+    from {
+        left: -224px;
+    }
+
+    to {
+        left: 0;
+    }
+}
+
+@keyframes slideout {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: -224px;
+    }
+}
+
+@keyframes showUp {
+    from {
+        background-color: transparent
+    }
+
+    to {
+        background-color: rgba(0, 0, 0, 0.7)
+    }
+}
+
+#oc-ytb-guide-section {
+    padding: 12px 0;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid lightblue;
+}
+
+#oc-ytb-guide-section div {
+    border-radius: 3px;
+    background-color: white;
+    height: 40px;
+}
+
+#ytb-settings svg {
+    filter: invert(1);
+}
+
+.pric {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: inline-block;
+    padding: 16px 24px 0;
+}
+
+.pric a {
+    margin-right: 6px;
+    color: rgb(188, 188, 188);
+    font-weight: bold;
+    font-size: 13px;
+}
+
